@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:myn_ai/constatns/app_images.dart';
 import 'package:myn_ai/provider/splash_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -28,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Image.asset("assets/images/1.png", height: 200,),
+        child: Image.asset(AppImages.splash, height: 200,),
       )
     );
   }

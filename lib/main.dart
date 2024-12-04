@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
     child: MaterialApp(
       home: SplashScreen(),
       theme: ThemeData(
+        fontFamily: "Lovelo",
         brightness: Brightness.dark
       ),
     ),

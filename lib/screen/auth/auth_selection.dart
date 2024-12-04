@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:myn_ai/constatns/app_images.dart';
+import 'package:myn_ai/widgets/outline_button.dart';
 
 class AuthSelection extends StatefulWidget {
   const AuthSelection({super.key});
@@ -16,6 +17,7 @@ class _AuthSelectionState extends State<AuthSelection> {
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Lottie.asset(AppImages.animation1),
             const SizedBox(
@@ -26,36 +28,9 @@ class _AuthSelectionState extends State<AuthSelection> {
             const SizedBox(
               height: 20,
             ),
-           SizedBox(
-            width: double.infinity,
-             child: OutlinedButton(
-               onPressed: () {
-                 // Add your onPressed functionality here
-               },
-               style: OutlinedButton.styleFrom(
-                 foregroundColor: Colors.white, // Text color
-                 side: const BorderSide(color: Colors.white, width: 2), // Border color and width
-                 shape: RoundedRectangleBorder(
-                   borderRadius: BorderRadius.circular(12), // Rounded corners
-                 ),
-                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12), // Button padding
-               ),
-               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                 children: [
-                  Image.asset(AppImages.emailIcon, height: 30,color: Colors.white,),
-                  const SizedBox(width: 20,),
-                   const Text(
-                     "Login with Email",
-                     style: TextStyle(
-                       fontSize: 16, // Text size
-                       fontWeight: FontWeight.bold, // Text weight
-                     ),
-                   ),
-                 ],
-               ),
-             ),
-           ),
+           MyOutlineButtons(text: "Login With Email", onPressed: (){}, color: Colors.white, textColor: Colors.white, radius: 12, icon: Image.asset(AppImages.emailIcon, height: 30,color: Colors.white,),),
+           const SizedBox(height: 20,),
+           MyOutlineButtons(text: "Login With Google", onPressed: (){}, color: Colors.white, textColor: Colors.white, radius: 12, icon: Image.asset(AppImages.googleLogo, height: 30),),
         
               
           ],
